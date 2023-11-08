@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+}
+body{
+    min-height: 100vh;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.3;
+    font-family: 'Bebas Neue', cursive;
+    overflow: hidden;
+}
+.wrapper{
+    /* give width below according to the number of sections you have in html */
+    width: 400%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    /* gap: 20px; */
+}
+
+.logo{
+    font-size: 8rem;
+    position: fixed;
+    z-index: 10;
+    top: 15%;
+    left: 4rem;
+    line-height: 0.9;
+}
+.bands{
+  height: 100vh;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  width: 300px;
+  z-index: 20;
+  will-change: transform;
+  text-align: left;
+  gap: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.band{
+    /* align-items: flex-start;
+  background: #faf6e7;
+  box-shadow: inset -1px 0 0 0 #687d79;
+  color: #687d79;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  justify-content: space-between;
+  opacity: 1;
+  position: absolute;
+  width: 100px;
+  will-change: width;
+  z-index: 20;
+  top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; */
+  display: flex;
+  height: 100vh;
+  width: 100px;
+  background: chocolate;
+  box-shadow: inset -1px 0 0 10px coral;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position:relative;
+  transform: translateX(0);
+  /* left: 0; */
+
+}
+
+
+
+.line{
+    background: #f81515;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+div.bar{
+    width: 108px;
+    height: 100%;
+    position: relative;
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: #ccc;
+    border-left: 1px solid #f52b2b;
+    border-right: 1px solid #f52b2b;
+}
+.block{
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateX(-100%);
+}
+
+.about div.bar, .about .block{
+    background: #ffc107;
+
+}
+.work div.bar, .work .block{
+    background: #a2f08e;
+}
+.contact div.bar, .contact .block{
+    background: #83cdc1;
+}
+
+.caption{
+    position: absolute;
+    left: calc(4rem + 108px);
+    bottom: 4rem;
+    width: 30%;
+    font-weight: 400;
+    color: #444;
+    font-family: monospace;
+    transform: translate(100%, 100%);
+}
+.section img {
+    position: absolute;
+    z-index: 10;
+    height: 90vh;
+    width: auto;
+    margin-inline: auto;
+    transform: translateY(-100%);
+}
+.huge-text{
+    font-size: 25rem;
+    width: 100%;
+    text-align: center;
+    color: #f52b2b;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transform: translateY(100%);
+    font-weight: 700;
+}
+
+.nickname{
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    font-size: 3rem;
+    text-align: right;
+    transform: translateY(-200%);
+}
+.nickname span{
+    display: block;
+    font-size: 70%;
+    color:#f52b2b ;
+}
+
+.quote {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    font-size: 3rem;
+    width: 30%;
+    text-align: right;
+    transform: translateY(200%);
+}
+
+.quote::before, .quote::after {
+    content: '';
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
