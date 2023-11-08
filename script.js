@@ -152,34 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 
-    let section1 = 0;
-    let section2 = 0;
-    let section3 = 0;
-    gsap.to(window, {
-        duration: 0.1,
-        repeat: 1,
-        scrollTo: {
-            y: "max"
-        },
-        yoyo: true,
-        onUpdate: () => {
-            document.querySelectorAll('.section').forEach(sec => {
-                // if (sec.id == 'sec-1' && sec.getBoundingClientRect().left == 0) {
-                //     section1 = $(window).scrollTop()
-                // } else if (sec.id == 'sec-2' && sec.getBoundingClientRect().left == 0) {
-                //     section2 = $(window).scrollTop()
-                // }
-                // else if (sec.id == 'sec-3' && sec.getBoundingClientRect().left == 0) {
-                //     section3 = $(window).scrollTop()
-                // }
-                if (sec.id == 'sec-2') {
-                    if (sec.getBoundingClientRect().left == 0) {
-                        console.log('done');
-                    }
-                }
-            })
-        }
-    })
+
 
 
 
