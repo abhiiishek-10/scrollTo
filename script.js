@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
             trigger: '.wrapper',
             pin: true,
-            scrub: true,
+            scrub: 1,
             // snap: 1 / (sections.length - 1),
             start: 'top top',
             endTrigger: $('.wrapper').width(),
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger: '.logo',
             start: 'top top',
             end: 500,
-            scrub: true,
+            scrub: 1,
         }
     })
 
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         height: '10rem',
         scrollTrigger: {
             trigger: '.line',
-            scrub: true,
+            scrub: 1,
             start: 'center center',
             end: 2000,
         }
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: el.querySelector('.caption'),
                 start: 'top bottom',
                 end: '+=1000',
-                scrub: true,
+                scrub: 1,
             }
         })
 
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: el.querySelector('.quote'),
                 start: 'top bottom',
                 end: '+=20%',
-                scrub: true,
+                scrub: 1,
             }
         })
 
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: el.querySelector('.nickname'),
                 start: 'top bottom',
                 end: '+=10%',
-                scrub: true,
+                scrub: 1,
             }
         })
         gsap.to(el.querySelector('.block'), {
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: el.querySelector('.block'),
                 start: 'top bottom',
                 end: '+=' + window.innerWidth,
-                scrub: true,
+                scrub: 1,
             }
         })
         gsap.to(el.querySelector('img'), {
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: el.querySelector('img'),
                 start: 'top bottom',
                 end: '+=50%',
-                scrub: true,
+                scrub: 1,
             }
         })
         gsap.to(el.querySelector('.huge-text'), {
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: el.querySelector('.huge-text'),
                 start: 'top bottom',
                 end: '+=100%',
-                scrub: true,
+                scrub: 1,
             }
         })
 
