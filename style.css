@@ -36,7 +36,8 @@ body{
   right: 0;
   bottom: 0;
   position: fixed;
-  width: 300px;
+  /* width = (width of one band) * (total number of bands) */
+  /* width: 300px; */
   z-index: 20;
   will-change: transform;
   text-align: left;
@@ -47,24 +48,7 @@ body{
 }
 
 .band{
-    /* align-items: flex-start;
-  background: #faf6e7;
-  box-shadow: inset -1px 0 0 0 #687d79;
-  color: #687d79;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  height: 100svh;
-  justify-content: space-between;
-  opacity: 1;
-  position: absolute;
-  width: 100px;
-  will-change: width;
-  z-index: 20;
-  top: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none; */
+   
   display: flex;
   height: 100vh;
   width: 100px;
@@ -75,7 +59,6 @@ body{
   padding: 0;
   position:relative;
   transform: translateX(0);
-  /* left: 0; */
 
 }
 

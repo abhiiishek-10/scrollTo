@@ -15,55 +15,61 @@
         <h1>LOREM <br> IPSUM <br> DOLOR</h1>
     </div>
     <div class="bands">
-        <a class="band" id="band-1">List 1</a>
-        <a class="band" id="band-2">List 2</a>
-        <a class="band" id="band-3"> List 3</a>
+        <a class="band" id="band-1" data-section="#sec-1">List 1</a>
+        <a class="band" id="band-2" data-section="#sec-2">List 2</a>
+        <a class="band" id="band-3" data-section="#sec-3"> List 3</a>
     </div>
 
-    <div class="wrapper">
+    <div id="panels">
+        <div class="wrapper">
+            <section class="intro section " data-section="band-1">
+                <div class="line"></div>
+            </section>
 
-        <section id="sec-1" class="intro section" data-section="band-1">
-            <div class="line"></div>
-        </section>
+            <section id="sec-1" class="about section sec-click" data-section="band-2">
+                <!-- <div class="bar"></div> -->
+                <div class="block"></div>
+                <img src="./saitama.png" alt="">
+                <span class="huge-text">LOREM</span>
+                <div class="caption">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ducimus exercitationem rem sed
+                    officiis
+                    ipsa ratione quae cum quibusdam nobis!
+                </div>
+                <div class="nickname"><span>ipsum</span>dolor ipsum</div>
+                <div class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </section>
 
-        <section id="sec-2" class="about section" data-section="band-2">
-            <!-- <div class="bar"></div> -->
-            <div class="block"></div>
-            <img src="./saitama.png" alt="">
-            <span class="huge-text">LOREM</span>
-            <div class="caption">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ducimus exercitationem rem sed officiis
-                ipsa ratione quae cum quibusdam nobis!
-            </div>
-            <div class="nickname"><span>ipsum</span>dolor ipsum</div>
-            <div class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-        </section>
+            <section id="sec-2" class="work section sec-click" data-section="band-3">
+                <!-- <div class="bar"></div> -->
+                <div class="block"></div>
+                <img src="./saitama.png" alt="">
+                <span class="huge-text">IPSUM</span>
+                <div class="caption">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ducimus exercitationem rem sed
+                    officiis
+                    ipsa ratione quae cum quibusdam nobis!
+                </div>
+                <div class="nickname"><span>ipsum</span>dolor ipsum</div>
+                <div class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </section>
 
-        <section id="sec-3" class="work section" data-section="band-3">
-            <!-- <div class="bar"></div> -->
-            <div class="block"></div>
-            <img src="./saitama.png" alt="">
-            <span class="huge-text">IPSUM</span>
-            <div class="caption">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ducimus exercitationem rem sed officiis
-                ipsa ratione quae cum quibusdam nobis!
-            </div>
-            <div class="nickname"><span>ipsum</span>dolor ipsum</div>
-            <div class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-        </section>
-        <section id="sec-4" class="contact section" data-section="band-4">
-            <!-- <div class="bar"></div> -->
-            <div class="block"></div>
-            <img src="./saitama.png" alt="">
-            <span class="huge-text">DOLOR</span>
-            <div class="caption">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ducimus exercitationem rem sed officiis
-                ipsa ratione quae cum quibusdam nobis!
-            </div>
-            <div class="nickname"><span>ipsum</span>dolor ipsum</div>
-            <div class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-        </section>
+            <section id="sec-3" class="contact section sec-click" data-section="band-4">
+                <!-- <div class="bar"></div> -->
+                <div class="block"></div>
+                <img src="./saitama.png" alt="">
+                <span class="huge-text">DOLOR</span>
+                <div class="caption">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ducimus exercitationem rem sed
+                    officiis
+                    ipsa ratione quae cum quibusdam nobis!
+                </div>
+                <div class="nickname"><span>ipsum</span>dolor ipsum</div>
+                <div class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </section>
+        </div>
     </div>
+
 
 
 
@@ -75,6 +81,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <!-- <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script> -->
 
     <script src="script.js"></script>
 </body>

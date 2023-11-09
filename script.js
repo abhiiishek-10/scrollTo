@@ -1,17 +1,9 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    // let count = 100;
-    // const bands = document.querySelectorAll('.band').forEach(el => {
-    //     console.log(count);
-    //     gsap.set(el, {
-    //         x: count
-    //     })
-    //     count += 100
 
-    // });
     const sections = gsap.utils.toArray('section');
     let scrollTween = gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
@@ -26,15 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
             end: 3000,
         }
     })
-    sections.forEach(section => {
-        gsap.set(section, {
-            width: section.innerWidth - $('.bands').width(),
-        })
-    })
+
+    // setting width of parent of bands
+    $('.bands').css('width', `${$('.band').length * $('.band').width()}px`)
 
     const bands = gsap.utils.toArray('.band');
     let offset = 0;
-    let reversedOffset = 300;
+    let reversedOffset = $('.band').length * $('.band').width();
+
     bands.forEach(band => {
         gsap.to(band, {
             ease: 'none',
@@ -52,9 +43,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 markers: true
             }
         })
-        offset += 100;
-        reversedOffset -= 100;
+        offset += $('.band').width();
+        reversedOffset -= $('.band').width();
 
+    })
+    let panelsSection = document.querySelector("#panels"),
+        panelsContainer = document.querySelector(".wrapper");
+
+    $('.band').on('click', function (e) {
+        // band click logic goes 
+
+
+        e.preventDefault();
+        let targetElem = document.querySelector($(this).data('section')),
+            y = targetElem;
+        if (targetElem && panelsContainer.isSameNode(targetElem.parentElement)) {
+            let totalScroll = scrollTween.scrollTrigger.end - scrollTween.scrollTrigger.start,
+                totalMovement = (sections.length - 1) * targetElem.offsetWidth;
+            console.log(totalMovement);
+            y = Math.round(scrollTween.scrollTrigger.start + (targetElem.offsetLeft / totalMovement) * totalScroll);
+        }
+
+        gsap.to(window, {
+            scrollTo: {
+                y: y,
+                autoKill: false
+            },
+            duration: 1
+        });
     })
 
 
@@ -156,36 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    $('.band').on('click', function (e) {
-        if (e.target.id == 'band-1') {
-            console.log('band-1 clicked');
-            gsap.to(window, {
-                duration: 1,
-                scrollTo: {
-                    y: 0
-                },
-
-            })
-        } else if (e.target.id == 'band-2') {
-            console.log('band-2 clicked', { section2 });
-            gsap.to(window, {
-                duration: 1,
-                scrollTo: {
-                    y: section2
-                },
-
-            })
-        } else if (e.target.id == 'band-3') {
-            console.log('band-3 clicked', { section3 });
-            gsap.to(window, {
-                duration: 1,
-                scrollTo: {
-                    y: section3
-                },
-
-            })
-        }
-    })
 
 
 
