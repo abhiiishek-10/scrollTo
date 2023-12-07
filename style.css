@@ -1,4 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* @font-face {
+    font-family: 'Chillax';
+    src: url('./fonts/Chillax-Variable.woff2') format('woff2'),
+         url('./fonts/Chillax-Variable.woff') format('woff'),
+         url('./fonts/Chillax-Variable.ttf') format('truetype');
+         font-weight: 200 700;
+         font-display: swap;
+         font-style: normal;
+  } */
+  
+  
+  @font-face {
+    font-family: 'Chillax';
+    src: url('./fonts/Chillax-Extralight.woff2') format('woff2'),
+         url('./fonts/Chillax-Extralight.woff') format('woff'),
+         url('./fonts/Chillax-Extralight.ttf') format('truetype');
+         font-weight: 200;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Chillax';
+    src: url('./fonts/Chillax-Light.woff2') format('woff2'),
+         url('./fonts/Chillax-Light.woff') format('woff'),
+         url('./fonts/Chillax-Light.ttf') format('truetype');
+         font-weight: 300;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Chillax';
+    src: url('./fonts/Chillax-Regular.woff2') format('woff2'),
+         url('./fonts/Chillax-Regular.woff') format('woff'),
+         url('./fonts/Chillax-Regular.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Chillax';
+    src: url('./fonts/Chillax-Medium.woff2') format('woff2'),
+         url('./fonts/Chillax-Medium.woff') format('woff'),
+         url('./fonts/Chillax-Medium.ttf') format('truetype');
+         font-weight: 500;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Chillax';
+    src: url('./fonts/Chillax-Semibold.woff2') format('woff2'),
+         url('./fonts/Chillax-Semibold.woff') format('woff'),
+         url('./fonts/Chillax-Semibold.ttf') format('truetype');
+         font-weight: 600;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'Chillax';
+    src: url('./fonts/Chillax-Bold.woff2') format('woff2'),
+         url('./fonts/Chillax-Bold.woff') format('woff'),
+         url('./fonts/Chillax-Bold.ttf') format('truetype');
+         font-weight: 700;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+  
 *, *::before, *::after{
     margin: 0;
     padding: 0;
@@ -12,14 +90,18 @@ body{
     font-size: 16px;
     line-height: 1.3;
     font-family: 'Bebas Neue', cursive;
+    font-family: 'Chillax';
     overflow: hidden;
 }
+
 .wrapper{
     /* give width below according to the number of sections you have in html */
     width: 400%;
     height: 100%;
     display: flex;
     flex-wrap: nowrap;
+    justify-self: flex-start;
+    align-items: flex-start;
     /* gap: 20px; */
 }
 
@@ -62,8 +144,6 @@ body{
 
 }
 
-
-
 .line{
     background: #f81515;
     height: 1rem;
@@ -74,15 +154,72 @@ body{
 }
 
 section{
+    /* padding: 0 300px; */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
     height: 100vh;
     overflow: hidden;
+    flex-shrink: 0;
+}
+section.intro{
+    width: calc(100vw - 300px);
+}
+section:not(.intro){
+    min-width: 100vw;
+}
+section.about{
+    background: #875dca;
+}
+section.work{
+    background: #c35dca;
+}
+section.contact{
+    background: #ca5d73;
+}
+.slider-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    flex-wrap: nowrap;
+    padding: 0 50px 0 150px;
 }
 
+.slider-wrapper .slide{
+    width: 400px;
+    height: 250px;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+.slider-wrapper .slide:not(:last-child){
+    margin-right: 16px;
+}
+section.about .slider-wrapper .slide{
+    background: #c35dca;
+    box-shadow: inset -1px 0 0 10px #c47cc9;
+}
+section.work .slider-wrapper .slide{
+    background: #ca5d73;
+    box-shadow: inset -1px 0 0 10px #c65169;
+}
+section.contact .slider-wrapper .slide{
+    background: #875dca;
+    box-shadow: inset -1px 0 0 10px #9275c2;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
 div.bar{
     width: 108px;
     height: 100%;
@@ -174,12 +311,4 @@ div.bar{
 .quote::before, .quote::after {
     content: '';
     color: #ccc;
-}
-
-
-
-
-
-
-
-
+} */
